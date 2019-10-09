@@ -1,12 +1,13 @@
 {
-  "name": "hashtag-shredder",
+  "name": "@intothesource/hashtag-shredder",
   "version": "1.0.0",
   "description": "Shreds hashtags",
   "main": "index.js",
   "scripts": {
     "ava": "npx ava",
     "eslint": "npx eslint *.js && ava && tsd",
-    "test": "npm run eslint"
+    "test": "npm run eslint",
+    "release": "np"
   },
   "files": [
     "index.js",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "eslint": "^6.5.1",
+    "np": "*",
     "tsd": "^0.9.0"
   }
 }
