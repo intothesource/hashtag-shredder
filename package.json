@@ -1,0 +1,34 @@
+{
+  "name": "hashtag-shredder",
+  "version": "1.0.0",
+  "description": "Shreds hashtags",
+  "main": "index.js",
+  "scripts": {
+    "ava": "npx ava",
+    "eslint": "npx eslint *.js && ava && tsd",
+    "test": "npm run eslint"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intothesource/hashtag-shredder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intothesource/hashtag-shredder/issues"
+  },
+  "homepage": "https://github.com/intothesource/hashtag-shredder#readme",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.5.1",
+    "tsd": "^0.9.0"
+  }
+}
