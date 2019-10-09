@@ -1,6 +1,6 @@
 {
   "name": "@intothesource/hashtag-shredder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shreds hashtags",
   "main": "dist/hashtag-shredder.js",
   "module": "index.js",
