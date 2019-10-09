@@ -48,7 +48,9 @@
 
             function createUpdater(textarea) {
                 return function update() {
+                    console.log(textarea.value, '=>', result.textContent);
                     result.textContent = hashtagShredder.HashtagShredder.shred(textarea.value);
+                    console.log(textarea.value, '=>', result.textContent);
                 }
             }
 
