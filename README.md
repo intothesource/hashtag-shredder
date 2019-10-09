@@ -1,0 +1,2 @@
+# hashtag-shredder
+Shreds hashtags
