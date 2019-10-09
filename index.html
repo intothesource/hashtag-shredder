@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                max-width: 960px;
+                margin: 0 auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                padding: 1rem;
+                background: #fafafa;
+            }
+
+            textarea,
+            .result {
+                padding: 1rem;
+            }
+
+            textarea {
+                width: 100%;
+                font: inherit;
+                resize: none;
+                border: 1px solid silver;
+                border-radius: 1rem;
+                outline: none;
+            }
+
+            .result {
+                font-weight: bold;
+            }
+
+            #result {
+                font-weight: normal;
+                color: #333;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>@intothesource/hashtag-shredder</h1>
+        <p>Shreds hashtags 🤘. Type something in the textbox below to see the result.</p>
+        <textarea>Foo #hash #Tag Bar https://example.com/index.html#hash</textarea>
+        <div class="result">Result: <span id=result></span></div>
+        <script src="https://unpkg.com/autosize@4.0.2/dist/autosize.js"></script>
+        <script src="hashtag-shredder.js"></script>
+        <script>
+            var textareas = [].slice.call(document.querySelectorAll('textarea'));
+            var result = document.getElementById('result');
+
+            function createUpdater(textarea) {
+                return function update() {
+                    result.textContent = hashtagShredder.HashtagShredder.shred(textarea.value);
+                }
+            }
+
+            textareas.forEach(function (textarea) {
+                autosize(textarea);
+                var updater = createUpdater(textarea);
+                textarea.addEventListener('input', updater);
+                updater();
+            })
+        </script>
+
+    <script type="text/javascript" src="hashtag-shredder.js"></script></body>
+</html>
