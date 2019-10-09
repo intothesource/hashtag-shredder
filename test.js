@@ -16,6 +16,13 @@ test('HashtagShredder() — be nice with whitespace', t => {
     t.is(shredded, 'Foo Bar');
 });
 
+test('HashtagShredder() — be nice with uppercase and lowercase', t => {
+    const original = 'Foo #hash #tag Bar';
+    const shredded = HashtagShredder.shred(original);
+
+    t.is(shredded, 'Foo Bar');
+});
+
 test('HashtagShredder() — also shred trailing whitespace', t => {
     const original = '#Foo ';
     const shredded = HashtagShredder.shred(original);

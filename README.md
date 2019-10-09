@@ -18,3 +18,9 @@ t.is(shredded, 'Foo Bar');
 ```console
 $ npm run release -- [patch|minor|major]
 ```
+
+## Update the docs on https://intothesource.github.io/hashtag-shredder/
+
+```console
+$ npm run deploy:gh-pages
+```

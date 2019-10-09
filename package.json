@@ -2,15 +2,19 @@
   "name": "@intothesource/hashtag-shredder",
   "version": "1.0.2",
   "description": "Shreds hashtags",
-  "main": "index.js",
+  "main": "dist/hashtag-shredder.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "start:dev": "webpack-dev-server --mode development --port 8080",
     "ava": "npx ava",
     "eslint": "npx eslint *.js && ava && tsd",
     "test": "npm run eslint",
+    "version": "npm run build",
+    "deploy:gh-pages": "gh-pages -d dist",
     "release": "np"
   },
   "files": [
-    "index.js",
+    "dist/**/*.js",
     "index.d.ts"
   ],
   "publishConfig": {
@@ -28,9 +32,16 @@
   },
   "homepage": "https://github.com/intothesource/hashtag-shredder#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
     "ava": "^2.4.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
+    "gh-pages": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
     "np": "*",
-    "tsd": "^0.9.0"
+    "tsd": "^0.9.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   }
 }
