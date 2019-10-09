@@ -2,6 +2,8 @@ import test from 'ava';
 
 import { HashtagShredder } from '.';
 
+console.dir({ HashtagShredder });
+
 test('HashtagShredder() — empty string if only input is a hashtag', t => {
     const original = '#Foo';
     const shredded = HashtagShredder.shred(original);

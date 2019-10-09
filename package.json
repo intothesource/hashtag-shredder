@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Shreds hashtags",
   "main": "dist/hashtag-shredder.js",
+  "module": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "start:dev": "webpack-dev-server --mode development --port 8080",
@@ -15,6 +16,7 @@
   },
   "files": [
     "dist/**/*.js",
+    "index.js",
     "index.d.ts"
   ],
   "publishConfig": {

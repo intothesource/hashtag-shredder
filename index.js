@@ -1,6 +1,6 @@
 const REGEXP = /\B#\w+(\b\s)?/gm;
 
-class HashtagShredder {
+export class HashtagShredder {
 
     static shred(text) {
         return new this(text).shred();
@@ -14,5 +14,3 @@ class HashtagShredder {
         return text.replace(REGEXP, '');
     }
 }
-
-module.exports.HashtagShredder = HashtagShredder;
